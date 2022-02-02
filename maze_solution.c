@@ -80,7 +80,7 @@ int main()
         if( Y == n-1 ) { break; } 
       }
       else if ( maze[X-1][Y] == '1' ){
-        X - - ;
+        X--;
         direction = 4 ;
       }
       else if ( maze[X-1][Y] == '0' && maze[X][Y+1] == '0' ){
@@ -90,7 +90,7 @@ int main()
 
     else if( direction == 3 ){
       if( maze[X+1][Y] == '0' && maze[X][Y-1] == '1' ){
-        Y - - ;
+        Y--;
         if( Y == 0 ) { break; }    
       }
       else if ( maze[X+1][Y] == '1' ){
@@ -104,11 +104,11 @@ int main()
 
     else if ( direction == 4 ){
       if( maze[X][Y-1] == '0' && maze[X-1][Y] == '1' ){
-        X - - ;
+        X--;
         if( X == 0 ) { break; } 
       }
       else if ( maze[X][Y-1] == '1' ){
-        Y - - ;
+        Y--;
         direction = 3 ;
       }
       else if ( maze[X][Y-1] == '0' && maze[X-1][Y] == '0' ){
